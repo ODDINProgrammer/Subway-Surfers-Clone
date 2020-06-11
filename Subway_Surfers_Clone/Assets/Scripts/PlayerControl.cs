@@ -7,10 +7,11 @@ public class PlayerControl : MonoBehaviour
 {
     //Variables
     [SerializeField] private float Speed; //Player speed 
-    private float PlayerPositionOnRoadX = 0.33f;
-    [SerializeField] private float LaneChangeSpeed;
-    [SerializeField] private Vector3 NewPlayerPos;
+    [SerializeField][Range(0f, 1f)] private float LaneChangeSpeed = 0.5f; // Speed of movement between lanes
+    [SerializeField] private Vector3 NewPlayerPos; // Store position, where player will be moved to
+    
     private RaycastHit hit; // Storing information of ray intersection
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,13 +31,12 @@ public class PlayerControl : MonoBehaviour
         // to get information, where player is currently at.
         if (Input.GetKeyDown(KeyCode.A) && hit.collider.gameObject.GetComponent<RoadPos>().roadPosition != RoadPos.Position.Left)
         {
-            //Mathf.Lerp(transform.position.x, -PlayerPositionOnRoadX, LaneChangeSpeed);
             transform.position -= NewPlayerPos;
         }
         if (Input.GetKeyDown(KeyCode.D) && hit.collider.gameObject.GetComponent<RoadPos>().roadPosition != RoadPos.Position.Right)
         {
-            // Mathf.Lerp(transform.position.x, PlayerPositionOnRoadX, LaneChangeSpeed);
             transform.position += NewPlayerPos;
         }
+       
     }
 }

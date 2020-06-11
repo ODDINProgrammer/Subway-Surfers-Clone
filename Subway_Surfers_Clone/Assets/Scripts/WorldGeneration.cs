@@ -14,7 +14,7 @@ public class WorldGeneration : MonoBehaviour
     {
         SpawnedChunks.Add(StartingChunk); // Add starting chunk to list. This is the one without any obstacles and collectibles.
         // Initialize world for the begining of the game
-        while (SpawnedChunks.Count < 8) 
+        while (SpawnedChunks.Count < 3) 
         {
             SpawnChunk();
         }
