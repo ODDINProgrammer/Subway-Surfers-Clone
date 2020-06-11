@@ -13,7 +13,8 @@ public class WorldGeneration : MonoBehaviour
     private void Start()
     {
         SpawnedChunks.Add(StartingChunk); // Add starting chunk to list. This is the one without any obstacles and collectibles.
-        while(SpawnedChunks.Count < 6) // Initialize world for the begining of the game
+        // Initialize world for the begining of the game
+        while (SpawnedChunks.Count < 8) 
         {
             SpawnChunk();
         }
@@ -22,7 +23,14 @@ public class WorldGeneration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //When player exit previous chunk, spawn a new one and remove the one, which player just moved from.
+        //I have added a small number to end position check, so that player cant notice chunk being deleted.
+        if(Player.position.z > SpawnedChunks[0].End.position.z + 5)
+        {
+            SpawnChunk();
+            Destroy(SpawnedChunks[0].gameObject);
+            SpawnedChunks.RemoveAt(0);
+        }
     }
 
     private void SpawnChunk()
