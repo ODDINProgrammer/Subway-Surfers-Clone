@@ -35,10 +35,16 @@ public class GenerateObject : MonoBehaviour
         // Wall
         if (rand >= previousRangeMax && rand < Wall)
         {
-            objectIndex = 2;
-            previousRangeMax = Wall;
+            // if amount of obstacles present on chunk do not exceed the allowed amount, spawn a new one.
+            if (FindObjectOfType<Chunk>().GetObstacleAmount() < FindObjectOfType<Chunk>().GetAllowedObstacleAmount())
+            {
+                objectIndex = 2;
+                previousRangeMax = Wall;
+                FindObjectOfType<Chunk>().ChangeObstacleAmount(1);
+            }
         }
         GameObject instance = Instantiate(objectList[objectIndex], transform.position, Quaternion.identity); // Spawn object at position of game object, which has this script attached to.
+        instance.transform.position = new Vector3(transform.position.x, objectList[objectIndex].transform.position.y, transform.position.z); // Change y coordinate of spawned object
         instance.transform.parent = transform; // Make spawned object a child of spawn point. That way spawned objects will be destroyed along with spawn point, when destroying a chunk.
     }
 }
