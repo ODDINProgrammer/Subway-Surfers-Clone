@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class WorldGeneration : MonoBehaviour
 {
@@ -35,7 +36,8 @@ public class WorldGeneration : MonoBehaviour
 
     private void SpawnChunk()
     {
-        Chunk newChunk = Instantiate(Chunks[0]); // Spawn new chunk
+        
+        Chunk newChunk = Instantiate(Chunks[1]); // Spawn new chunk
         newChunk.transform.position = SpawnedChunks[SpawnedChunks.Count - 1].End.position - newChunk.Begin.localPosition; // Move new chunk to allign with end point of previous one.
         SpawnedChunks.Add(newChunk); // Add new chunk to list of chunks
     }
