@@ -38,6 +38,7 @@ public class WorldGeneration : MonoBehaviour
     {
         
         Chunk newChunk = Instantiate(Chunks[1]); // Spawn new chunk
+        newChunk.transform.parent = transform; // Make new chunk a child of World game object. Makes game inspector cleaner.
         newChunk.transform.position = SpawnedChunks[SpawnedChunks.Count - 1].End.position - newChunk.Begin.localPosition; // Move new chunk to allign with end point of previous one.
         SpawnedChunks.Add(newChunk); // Add new chunk to list of chunks
     }

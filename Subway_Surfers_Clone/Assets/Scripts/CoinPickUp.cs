@@ -11,7 +11,7 @@ public class CoinPickUp : MonoBehaviour
     //Checking, if car enters trigger collider of the coin
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "Car")
+        if(other.tag == "Player")
         {
             FindObjectOfType<HUDDisplay>().SetScore(Value); // Find canvas game object to access SetScore method
             Destroy(gameObject);
