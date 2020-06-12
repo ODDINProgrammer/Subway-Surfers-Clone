@@ -8,16 +8,18 @@ public class GenerateObject : MonoBehaviour
     [SerializeField] private List<GameObject> objectList; // List that stores objects, e.g., coins, powerups.
     [SerializeField] private int objectIndex; // Used to pick up object from list.
     // Object chances to spawn
+    [Header("Chances are defined by difference of numbers below.")]
     [SerializeField] private int Empty = 50;
     [SerializeField] private int Coin = 85;
     [SerializeField] private int Wall = 100;
     private int previousRangeMax; // Used to store max value of previous range check
+
     // Start is called before the first frame update
     void Start()
     {
         // Object Generation routine 
         int rand = Random.Range(0, 100); // Generate random number to decide, which object to spawn.
-        // Determine chances of objects to be spawned 
+        // Define chances of objects to be spawned 
         // Empty space
         if(rand >= 0 && rand < Empty)
         {

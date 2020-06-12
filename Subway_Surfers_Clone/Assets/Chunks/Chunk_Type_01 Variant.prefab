@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &129161535
 GameObject:
@@ -100,7 +100,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &188502016
 GameObject:
@@ -151,7 +151,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &302562008
 GameObject:
@@ -202,7 +202,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &340337516
 GameObject:
@@ -253,7 +253,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &380257882
 GameObject:
@@ -304,7 +304,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &413872044
 GameObject:
@@ -355,7 +355,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &439549632
 GameObject:
@@ -406,7 +406,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &538048723
 GameObject:
@@ -457,7 +457,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &582451500
 GameObject:
@@ -508,7 +508,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &586825868
 GameObject:
@@ -559,7 +559,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &640250223
 GameObject:
@@ -610,7 +610,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &657492127
 GameObject:
@@ -661,7 +661,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &660406484
 GameObject:
@@ -712,7 +712,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &660498250
 GameObject:
@@ -763,7 +763,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &718958567
 GameObject:
@@ -814,7 +814,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &777296152
 GameObject:
@@ -865,7 +865,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &820356892
 GameObject:
@@ -916,7 +916,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &878088883
 GameObject:
@@ -967,7 +967,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &885497316
 GameObject:
@@ -1018,7 +1018,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &887680743
 GameObject:
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &901006082
 GameObject:
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &906399381
 GameObject:
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &923467188
 GameObject:
@@ -1222,7 +1222,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &928788097
 GameObject:
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &977614536
 GameObject:
@@ -1324,7 +1324,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1031960476
 GameObject:
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1039338243
 GameObject:
@@ -1426,7 +1426,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1105160462
 GameObject:
@@ -1477,7 +1477,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1133133047
 GameObject:
@@ -1528,7 +1528,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1177259903
 GameObject:
@@ -1579,7 +1579,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1192432508
 GameObject:
@@ -1630,7 +1630,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1200057119
 GameObject:
@@ -1681,7 +1681,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1213044398
 GameObject:
@@ -1732,7 +1732,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1228493996
 GameObject:
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1229356257
 GameObject:
@@ -1834,7 +1834,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1245938293
 GameObject:
@@ -1885,7 +1885,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1255095318
 GameObject:
@@ -1936,7 +1936,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1291647916
 GameObject:
@@ -1987,7 +1987,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1352206867
 GameObject:
@@ -2038,7 +2038,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1358059368
 GameObject:
@@ -2089,7 +2089,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1412661646
 GameObject:
@@ -2140,7 +2140,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1434543218
 GameObject:
@@ -2191,7 +2191,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1553469067
 GameObject:
@@ -2242,7 +2242,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1572821048
 GameObject:
@@ -2293,7 +2293,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1594528618
 GameObject:
@@ -2344,7 +2344,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1630417617
 GameObject:
@@ -2395,7 +2395,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1673513195
 GameObject:
@@ -2446,7 +2446,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1737935123
 GameObject:
@@ -2497,7 +2497,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1786812412
 GameObject:
@@ -2548,7 +2548,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1830912775
 GameObject:
@@ -2599,7 +2599,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1897677684
 GameObject:
@@ -2650,7 +2650,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1912603063
 GameObject:
@@ -2701,7 +2701,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1942288693
 GameObject:
@@ -2752,7 +2752,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1952007515
 GameObject:
@@ -2803,7 +2803,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &1968426266
 GameObject:
@@ -2854,7 +2854,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &2064062446
 GameObject:
@@ -2905,7 +2905,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &2083015375
 GameObject:
@@ -2956,7 +2956,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &2090047172
 GameObject:
@@ -3007,7 +3007,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &2953316265839973777
 GameObject:
@@ -3058,7 +3058,7 @@ MonoBehaviour:
   - {fileID: 5085584566247819274, guid: 0472622047ecd094b932ceac29119c5a, type: 3}
   objectIndex: 0
   Empty: 70
-  Coin: 95
+  Coin: 90
   Wall: 100
 --- !u!1 &6519179554743965347
 GameObject:

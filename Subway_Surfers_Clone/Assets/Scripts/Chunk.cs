@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Chunk : MonoBehaviour
 {
-    public Transform Begin; //Begiing of chunk
+    public Transform Begin; //Begining of chunk
     public Transform End; //End of chunk
 }

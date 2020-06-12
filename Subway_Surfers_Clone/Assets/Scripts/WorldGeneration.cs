@@ -10,6 +10,7 @@ public class WorldGeneration : MonoBehaviour
     [SerializeField] private Chunk[] Chunks; //Array of chunks 
     [SerializeField] private List<Chunk> SpawnedChunks = new List<Chunk>(); //List of spawned chunks currently visible on screen
     [SerializeField] private Chunk StartingChunk;
+
     // Start is called before the first frame update
     private void Start()
     {
