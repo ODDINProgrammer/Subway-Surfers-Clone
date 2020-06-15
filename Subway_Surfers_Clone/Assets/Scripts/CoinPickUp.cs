@@ -6,7 +6,7 @@ using UnityEngine;
 public class CoinPickUp : MonoBehaviour
 {
     //Variables
-    [SerializeField] private int Value; // Coin value
+    [SerializeField] private int Value;  // Coin value
 
     //Checking, if car enters trigger collider of the coin
     private void OnTriggerEnter(Collider other)
