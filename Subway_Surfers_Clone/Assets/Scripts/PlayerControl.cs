@@ -6,22 +6,12 @@ using UnityEngine.UIElements;
 public class PlayerControl : MonoBehaviour
 {
     // Variables
-    [SerializeField] private float Speed;                                 //Player speed 
-    [SerializeField][Range(0f, 1f)] private float LaneChangeSpeed = 0.5f; // Speed of movement between lanes
-    [SerializeField] private Vector3 NewPlayerPos;                        // Store position, where player will be moved to
+    [SerializeField] private float Speed;            // Player speed 
+    [SerializeField] private Vector3 NewPlayerPos;   // Store position, where player will be moved to
     // Sounds
     [SerializeField] private AudioSource CoinSound;
     [SerializeField] private AudioSource CarSound;
     
-    // Collieders
-    [SerializeField] private Collider LeftCollider;
-    [SerializeField] private Collider RightCollider;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -50,8 +40,6 @@ public class PlayerControl : MonoBehaviour
         {
             transform.position += NewPlayerPos;
         }
-
-       
     }
 
     private void OnTriggerEnter(Collider other)

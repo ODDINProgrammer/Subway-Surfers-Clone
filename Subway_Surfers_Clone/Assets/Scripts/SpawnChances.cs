@@ -11,6 +11,7 @@ public class SpawnChances : MonoBehaviour
     [SerializeField] private int Coin = 0;
     [SerializeField] private int Wall = 0;
     [SerializeField] private int LampPost = 0;
+    [SerializeField] private int WorkCones = 0;
 
     [SerializeField] private List<GameObject> objectList; // List that stores objects, e.g., coins, powerups.
    
@@ -27,6 +28,8 @@ public class SpawnChances : MonoBehaviour
                 return Wall;
             case 3:
                 return LampPost;
+            case 4:
+                return WorkCones;
         }
     }
 

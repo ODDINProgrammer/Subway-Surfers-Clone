@@ -8,7 +8,7 @@ public class HUDDisplay : MonoBehaviour
 {
     // Variables
     [SerializeField] private TextMeshProUGUI ScoreText; // Score text
-    private int Score = 0; // Score value
+    private int Score = 0;                                     // Score value
 
     // Update is called once per frame
     void Update()

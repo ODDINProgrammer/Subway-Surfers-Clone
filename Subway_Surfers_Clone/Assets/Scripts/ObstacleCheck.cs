@@ -56,6 +56,4 @@ public class ObstacleCheck : MonoBehaviour
                 return ObstacleOnRight;
         }
     }
-
-
 }
