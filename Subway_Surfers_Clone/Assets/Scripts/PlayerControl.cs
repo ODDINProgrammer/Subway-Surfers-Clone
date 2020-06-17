@@ -58,7 +58,8 @@ public class PlayerControl : MonoBehaviour
         Ray rayForward = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
         // Storing information of ray intersection
         RaycastHit hitForward;
-        int raySize = 3;
+        int raySize = 4;
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * raySize, Color.red);
         // Routine for interaction with obstacle
         // Physics.Raycast returns true, if ray intersected collider  
         if (collision.rigidbody.tag == "Obstacle" && Physics.Raycast(rayForward, out hitForward, raySize))

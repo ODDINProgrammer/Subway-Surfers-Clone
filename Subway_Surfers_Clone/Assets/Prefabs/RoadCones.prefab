@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3478343200787060110}
   m_Layer: 0
   m_Name: RoadCones
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ PrefabInstance:
     - target: {fileID: 2027503284347308158, guid: 39ee7ab6ae7ec774baf46b606689b91a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5909662
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2027503284347308158, guid: 39ee7ab6ae7ec774baf46b606689b91a,
         type: 3}
@@ -100,6 +100,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadWorkCone
       objectReference: {fileID: 0}
+    - target: {fileID: 6438343926387640296, guid: 39ee7ab6ae7ec774baf46b606689b91a,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ee7ab6ae7ec774baf46b606689b91a, type: 3}
 --- !u!4 &2213150254361369277 stripped
@@ -128,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 2027503284347308158, guid: 39ee7ab6ae7ec774baf46b606689b91a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5909662
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2027503284347308158, guid: 39ee7ab6ae7ec774baf46b606689b91a,
         type: 3}
@@ -175,6 +180,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadWorkCone (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6438343926387640296, guid: 39ee7ab6ae7ec774baf46b606689b91a,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ee7ab6ae7ec774baf46b606689b91a, type: 3}
 --- !u!4 &2620985543592234865 stripped
@@ -203,7 +213,7 @@ PrefabInstance:
     - target: {fileID: 2027503284347308158, guid: 39ee7ab6ae7ec774baf46b606689b91a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5909662
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2027503284347308158, guid: 39ee7ab6ae7ec774baf46b606689b91a,
         type: 3}
@@ -249,6 +259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoadWorkCone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438343926387640296, guid: 39ee7ab6ae7ec774baf46b606689b91a,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ee7ab6ae7ec774baf46b606689b91a, type: 3}

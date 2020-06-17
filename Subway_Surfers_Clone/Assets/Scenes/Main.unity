@@ -1241,6 +1241,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 137649712593347856, guid: 59cf25b3195a9ee4ba1b3a766134035a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 137649712593347857, guid: 59cf25b3195a9ee4ba1b3a766134035a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1301,6 +1306,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 137649712593347884, guid: 59cf25b3195a9ee4ba1b3a766134035a,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 137649712593347885, guid: 59cf25b3195a9ee4ba1b3a766134035a,
         type: 3}
       propertyPath: CoinSound
@@ -1311,5 +1321,20 @@ PrefabInstance:
       propertyPath: CarSound
       value: 
       objectReference: {fileID: 808842424}
+    - target: {fileID: 137649712593347885, guid: 59cf25b3195a9ee4ba1b3a766134035a,
+        type: 3}
+      propertyPath: Speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 137649713905698939, guid: 59cf25b3195a9ee4ba1b3a766134035a,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 137649713905698939, guid: 59cf25b3195a9ee4ba1b3a766134035a,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cf25b3195a9ee4ba1b3a766134035a, type: 3}
