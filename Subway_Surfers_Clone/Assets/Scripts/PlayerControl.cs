@@ -9,9 +9,17 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float Speed;            // Player speed 
     [SerializeField] private Vector3 NewPlayerPos;   // Store position, where player will be moved to
     // Sounds
+    [Header("Sounds")]
     [SerializeField] private AudioSource CoinSound;
     [SerializeField] private AudioSource CarSound;
-    
+    [SerializeField] private AudioSource CarCrash;
+    // Particles
+    [Header("Particles")]
+    [SerializeField] private ParticleSystem CrashSmoke;
+    // References
+    [Header("Game objects references")]
+    [SerializeField] private GameObject Smoke;
+
     // Update is called once per frame
     void Update()
     {
@@ -28,20 +36,24 @@ public class PlayerControl : MonoBehaviour
         // to get information, where player is currently at. It restricts movement if player
         // is currently at left or right sides of road.
         // It also restricts movement, if there is an obstacle in the way. (0 - Left check, 1 - Right check)
-        if (Input.GetKeyDown(KeyCode.A) && 
-            hitDown.collider.gameObject.GetComponent<RoadPos>().roadPosition != RoadPos.Position.Left &&
-            FindObjectOfType<ObstacleCheck>().ReturnObstacleCheckState(0) != true)
+        if (FindObjectOfType<gameManager>().GameOver() != true)
         {
-            transform.position -= NewPlayerPos;
-        }
-        if (Input.GetKeyDown(KeyCode.D) && 
-            hitDown.collider.gameObject.GetComponent<RoadPos>().roadPosition != RoadPos.Position.Right &&
-            FindObjectOfType<ObstacleCheck>().ReturnObstacleCheckState(1) != true)
-        {
-            transform.position += NewPlayerPos;
+            if (Input.GetKeyDown(KeyCode.A) &&
+                hitDown.collider.gameObject.GetComponent<RoadPos>().roadPosition != RoadPos.Position.Left &&
+                FindObjectOfType<ObstacleCheck>().ReturnObstacleCheckState(0) != true)
+            {
+                transform.position -= NewPlayerPos;
+            }
+            if (Input.GetKeyDown(KeyCode.D) &&
+                hitDown.collider.gameObject.GetComponent<RoadPos>().roadPosition != RoadPos.Position.Right &&
+                FindObjectOfType<ObstacleCheck>().ReturnObstacleCheckState(1) != true)
+            {
+                transform.position += NewPlayerPos;
+            }
         }
     }
 
+    // Coin pickup
     private void OnTriggerEnter(Collider other)
     {
         // Playing coin sound
@@ -54,18 +66,23 @@ public class PlayerControl : MonoBehaviour
     // Check if player rides into obstacle
     private void OnCollisionEnter(Collision collision)
     {
-        // Create a ray infront of the car, to check, if it hit any type of obstacle 
+        /*// Create a ray infront of the car, to check, if it hit any type of obstacle 
         Ray rayForward = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
         // Storing information of ray intersection
         RaycastHit hitForward;
         int raySize = 4;
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * raySize, Color.red);
         // Routine for interaction with obstacle
-        // Physics.Raycast returns true, if ray intersected collider  
-        if (collision.rigidbody.tag == "Obstacle" && Physics.Raycast(rayForward, out hitForward, raySize))
+        // Physics.Raycast returns true, if ray intersected collider && Physics.Raycast(rayForward, out hitForward, raySize)
+        */
+        if (collision.rigidbody.tag == "Obstacle")
         {
             Speed = 0;        // Stop the player
             CarSound.Stop();
+            CarCrash.Play();
+            Smoke.SetActive(true);
+            CrashSmoke.Play();
+            FindObjectOfType<gameManager>().EndGame();
         }
     }
 }

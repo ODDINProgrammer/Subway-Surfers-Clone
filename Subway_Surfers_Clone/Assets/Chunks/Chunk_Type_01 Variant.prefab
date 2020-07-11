@@ -2830,7 +2830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a8aab4cbfca564e902a1bde057fa72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coin: 20
+  Coin: 10
   Wall: 40
   LampPost: 50
   WorkCones: 40

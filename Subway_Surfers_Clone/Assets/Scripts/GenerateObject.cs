@@ -22,6 +22,7 @@ public class GenerateObject : MonoBehaviour
         // Object Generation routine 
         // Generate random number to decide, which object to spawn.
         int Chance = Random.Range(0, 100);
+        
         // Define chances of objects to be spawned 
         #region Object spawn chances 
         // Coin
