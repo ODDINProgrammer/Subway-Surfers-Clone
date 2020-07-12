@@ -34,7 +34,6 @@ public class GenerateObject : MonoBehaviour
         if (gameObject.transform.name == "ObstaclePoint")
         {
             int PickObstacle = Random.Range(0, 100);
-            Debug.Log("Picked object: " + PickObstacle);
             // Wall
             if (PickObstacle > 0 && PickObstacle <= 50)
             {

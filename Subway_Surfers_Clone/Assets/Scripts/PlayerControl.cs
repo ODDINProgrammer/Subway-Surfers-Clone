@@ -19,6 +19,10 @@ public class PlayerControl : MonoBehaviour
     // References
     [Header("Game objects references")]
     [SerializeField] private GameObject Smoke;
+    // Animations
+    [Header("Animators")]
+    [SerializeField] private Animator RearFlashlights;
+
 
     // Update is called once per frame
     void Update()
@@ -66,21 +70,15 @@ public class PlayerControl : MonoBehaviour
     // Check if player rides into obstacle
     private void OnCollisionEnter(Collision collision)
     {
-        /*// Create a ray infront of the car, to check, if it hit any type of obstacle 
-        Ray rayForward = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
-        // Storing information of ray intersection
-        RaycastHit hitForward;
-        int raySize = 4;
-        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * raySize, Color.red);
-        // Routine for interaction with obstacle
-        // Physics.Raycast returns true, if ray intersected collider && Physics.Raycast(rayForward, out hitForward, raySize)
-        */
         if (collision.rigidbody.tag == "Obstacle")
         {
-            Speed = 0;        // Stop the player
+            // After hitting an obstacle car ends up a bit inside of it's model, so I put it back a bit
+            transform.position -= new Vector3(0, 0, 0.5f);
+            Speed = 0;       
             CarSound.Stop();
             CarCrash.Play();
             Smoke.SetActive(true);
+            RearFlashlights.Play("FlashingRearLight");
             CrashSmoke.Play();
             FindObjectOfType<gameManager>().EndGame();
         }

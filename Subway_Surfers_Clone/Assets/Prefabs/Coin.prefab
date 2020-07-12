@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 58364007694155062}
   - component: {fileID: 58364007694155063}
   - component: {fileID: 58364007694155060}
+  - component: {fileID: 4795340993182755895}
   m_Layer: 8
   m_Name: Coin
   m_TagString: Coin
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 58364007694155017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -11}
-  m_LocalScale: {x: 0.5, y: 1, z: 0.1}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.2}
   m_Children:
   - {fileID: 4950760991836697044}
   m_Father: {fileID: 0}
@@ -108,6 +109,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value: 5
+--- !u!95 &4795340993182755895
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58364007694155017}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ba783687ab5e8040814529cbaf0fc84, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5486241033321526902
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +216,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 3.4024e-41, z: 0, w: 6.4392225e-10}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
