@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,6 +8,8 @@ public class PlayerControl : MonoBehaviour
 {
     // Variables
     [SerializeField] private float Speed;            // Player speed 
+    [SerializeField] private float SpeedStep;        // How much speed changes 
+    [SerializeField] private float MaxSpeed;         // Max speed 
     [SerializeField] private Vector3 NewPlayerPos;   // Store position, where player will be moved to
     // Sounds
     [Header("Sounds")]
@@ -22,7 +25,6 @@ public class PlayerControl : MonoBehaviour
     // Animations
     [Header("Animators")]
     [SerializeField] private Animator RearFlashlights;
-
 
     // Update is called once per frame
     void Update()
@@ -82,5 +84,11 @@ public class PlayerControl : MonoBehaviour
             CrashSmoke.Play();
             FindObjectOfType<gameManager>().EndGame();
         }
+    }
+
+    public void SetSpeed()
+    {
+        Debug.Log("Called SPEEDUP!!");
+        Speed += SpeedStep;
     }
 }

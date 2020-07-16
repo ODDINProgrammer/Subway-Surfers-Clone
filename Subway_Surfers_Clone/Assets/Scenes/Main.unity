@@ -947,6 +947,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreObject: {fileID: 1231890995}
   FinalScoreObject: {fileID: 1529537697}
+  TimeUntilShift: 0
+  ChangePlayerSpeedAt: 30
 --- !u!4 &940400790
 Transform:
   m_ObjectHideFlags: 0
@@ -1756,6 +1758,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 20
+  SpeedStep: 5
+  MaxSpeed: 50
   NewPlayerPos: {x: 3, y: 0, z: 0}
   CoinSound: {fileID: 1372241960}
   CarSound: {fileID: 808842424}

@@ -7,6 +7,9 @@ public class gameManager : MonoBehaviour
 
     [SerializeField] private GameObject ScoreObject;
     [SerializeField] private GameObject FinalScoreObject;
+    [SerializeField] private float TimeUntilShift;
+    [SerializeField] private float ChangePlayerSpeedAt;
+    private bool oneTime = false;
 
     // Game over routine
     public void EndGame()
@@ -14,7 +17,6 @@ public class gameManager : MonoBehaviour
         gameEnded = true;
         if (gameEnded)
         {
-            Debug.Log("GAME OVER");
             ScoreObject.SetActive(false);
             FinalScoreObject.SetActive(true);
             FindObjectOfType<HUDDisplay>().DisplayFinalScore();
@@ -29,21 +31,41 @@ public class gameManager : MonoBehaviour
     // KeyBoard input handler
     private void Update()
     {
-        // Restart game
-        if (gameEnded && Input.GetKeyDown(KeyCode.R))
+        if (!gameEnded)
         {
-            RestartGame();
-        }
-        // Terminate app
-        if(gameEnded && Input.GetKeyDown(KeyCode.Escape))
-        {
-            Debug.Log("Terminating App");
-            Application.Quit();
+            // Update run time
+            TimeUntilShift = Mathf.Round(Time.time);
+            if (TimeUntilShift % ChangePlayerSpeedAt == 0 && oneTime == false)
+            {
+                oneTime = true;
+                Invoke("SpeedUp", 1f);
+            }
+            // Restart game
+            if (gameEnded && Input.GetKeyDown(KeyCode.R))
+            {
+                RestartGame();
+            }
+            // Terminate app
+            if (gameEnded && Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
         }
     }
 
     public bool ReturnGameStatus()
     {
         return gameEnded;
+    }
+
+    public float ReturnChangeSpeedAt()
+    {
+        return ChangePlayerSpeedAt;
+    }
+
+    private void SpeedUp()
+    {
+        FindObjectOfType<PlayerControl>().SetSpeed();
+        oneTime = false;
     }
 }
