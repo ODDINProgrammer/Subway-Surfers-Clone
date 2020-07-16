@@ -539,6 +539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479360887}
+  - component: {fileID: 479360888}
   m_Layer: 0
   m_Name: DayNightCycleManager
   m_TagString: Untagged
@@ -561,6 +562,109 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &479360888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479360886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c53c06742127e949aa3d4e1b7fec1e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentTime: 0.1
+  DayDuration: 60
+  SunCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0037080178
+      value: 0
+      inSlope: 0.73220533
+      outSlope: 0.73220533
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.05325
+      value: 0.25319624
+      inSlope: 16.427992
+      outSlope: 16.427992
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14360525
+    - serializedVersion: 3
+      time: 0.08942531
+      value: 0.5570425
+      inSlope: 2.2980537
+      outSlope: 2.2980537
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.513301
+      outWeight: 0.42434168
+    - serializedVersion: 3
+      time: 0.1728962
+      value: 0.6
+      inSlope: 0.130071
+      outSlope: 0.130071
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4429833
+      outWeight: 0.3823667
+    - serializedVersion: 3
+      time: 0.29995298
+      value: 0.6
+      inSlope: 0.19183011
+      outSlope: 0.19183011
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.66579545
+      outWeight: 0.37741375
+    - serializedVersion: 3
+      time: 0.48788786
+      value: 0.6
+      inSlope: 0.010332603
+      outSlope: 0.010332603
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.40443495
+      outWeight: 0.5468953
+    - serializedVersion: 3
+      time: 0.5385324
+      value: 0.21278498
+      inSlope: -3.1802952
+      outSlope: -3.1802952
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6826213
+      value: 0
+      inSlope: -0.08201437
+      outSlope: -0.08201437
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0.00865705
+      outSlope: 0.00865705
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.21726738
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  SunIntensity: 0.6
+  Sun: {fileID: 705507994}
 --- !u!1 &671489385
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +726,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
+  m_Intensity: 0.6
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -667,7 +771,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.3609e-41, z: 0, w: NaN}
+  m_BoundingSphereOverride: {x: 0, y: 1.6973e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1043,8 +1147,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.00000020972726, y: 0.0000000033061383, z: 1.6913472e+22,
-    w: 0.000043006054}
+  m_BoundingSphereOverride: {x: 1.3e-44, y: 0, z: 0, w: 3.6e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1324,7 +1427,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.5464e-41, z: 0, w: 9.403955e-38}
+  m_BoundingSphereOverride: {x: 0, y: 1.8492e-41, z: 0, w: 7.3016675e+34}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1891,7 +1994,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.8469e-41, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.8648e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2272,7 +2375,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.1305e-41, z: 0, w: 9.403955e-38}
+  m_BoundingSphereOverride: {x: 0, y: 1.3834e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
