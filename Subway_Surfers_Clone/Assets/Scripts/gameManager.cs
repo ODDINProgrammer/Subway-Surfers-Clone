@@ -42,7 +42,7 @@ public class gameManager : MonoBehaviour
         }
     }
 
-    public bool GameOver()
+    public bool ReturnGameStatus()
     {
         return gameEnded;
     }

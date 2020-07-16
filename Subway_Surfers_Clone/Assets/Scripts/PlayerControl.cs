@@ -40,7 +40,7 @@ public class PlayerControl : MonoBehaviour
         // to get information, where player is currently at. It restricts movement if player
         // is currently at left or right sides of road.
         // It also restricts movement, if there is an obstacle in the way. (0 - Left check, 1 - Right check)
-        if (FindObjectOfType<gameManager>().GameOver() != true)
+        if (FindObjectOfType<gameManager>().ReturnGameStatus() != true)
         {
             if (Input.GetKeyDown(KeyCode.A) &&
                 hitDown.collider.gameObject.GetComponent<RoadPos>().roadPosition != RoadPos.Position.Left &&

@@ -1755,7 +1755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f82549a34aa9545ac36b30a41ec13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 40
+  Speed: 20
   NewPlayerPos: {x: 3, y: 0, z: 0}
   CoinSound: {fileID: 1372241960}
   CarSound: {fileID: 808842424}

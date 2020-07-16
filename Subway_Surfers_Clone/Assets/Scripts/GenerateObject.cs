@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
@@ -26,12 +27,12 @@ public class GenerateObject : MonoBehaviour
         // Define chances of objects to be spawned 
         #region Object spawn chances 
         // Coin
-        if (Chance > 0 && Chance <= _object.getChanceValue((int)ObtectType.Coin))
+        if (Chance > 0 && Chance <= _object.getChanceValue((int)ObtectType.Coin) && gameObject.tag == "Collectibles")
         {
             objectIndex = 1;
         }
         // Obstacles
-        if (gameObject.transform.name == "ObstaclePoint")
+        if (gameObject.tag == "Obstacle")
         {
             int PickObstacle = Random.Range(0, 100);
             // Wall
@@ -43,7 +44,7 @@ public class GenerateObject : MonoBehaviour
                 }
             }
             // Cones
-            if (PickObstacle > 50 && PickObstacle <= 100)
+            if (PickObstacle > 50 && PickObstacle <= 100 )
             {
                 if (Chance > 0 && Chance <= _object.getChanceValue((int)ObtectType.WorkCones))
                 {

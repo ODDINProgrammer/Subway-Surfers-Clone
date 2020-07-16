@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - Obstacle
+  - Collectibles
   layers:
   - Default
   - TransparentFX

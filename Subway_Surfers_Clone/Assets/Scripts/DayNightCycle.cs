@@ -18,10 +18,13 @@ public class DayNightCycle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CurrentTime += Time.deltaTime / DayDuration;
-        if (CurrentTime >= 1)
-            CurrentTime -= 1;
-        Sun.transform.localRotation = Quaternion.Euler(CurrentTime * 360f, 180, 0);
-        Sun.intensity = SunIntensity * SunCurve.Evaluate(CurrentTime);
+        if (FindObjectOfType<gameManager>().ReturnGameStatus() == false)
+        {
+            CurrentTime += Time.deltaTime / DayDuration;
+            if (CurrentTime >= 1)
+                CurrentTime -= 1;
+            Sun.transform.localRotation = Quaternion.Euler(CurrentTime * 360f, 180, 0);
+            Sun.intensity = SunIntensity * SunCurve.Evaluate(CurrentTime);
+        }
     }
 }
