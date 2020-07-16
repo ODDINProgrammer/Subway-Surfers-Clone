@@ -5,8 +5,7 @@ public class gameManager : MonoBehaviour
 {
     bool gameEnded = false;
 
-    [SerializeField] private GameObject ScoreObject;
-    [SerializeField] private GameObject FinalScoreObject;
+    
     [SerializeField] private float TimeUntilShift;
     [SerializeField] private float ChangePlayerSpeedAt;
     private bool oneTime = false;
@@ -17,9 +16,8 @@ public class gameManager : MonoBehaviour
         gameEnded = true;
         if (gameEnded)
         {
-            ScoreObject.SetActive(false);
-            FinalScoreObject.SetActive(true);
-            FindObjectOfType<HUDDisplay>().DisplayFinalScore();
+            FindObjectOfType<HUDDisplay>().DisplayUIElement((int)HUDDisplay.UIElement.EngineIcon);
+            FindObjectOfType<HUDDisplay>().DisplayUIElement((int)HUDDisplay.UIElement.EndGameScreen);
         }
     }
 
@@ -31,25 +29,22 @@ public class gameManager : MonoBehaviour
     // KeyBoard input handler
     private void Update()
     {
-        if (!gameEnded)
+        // Update run time
+        TimeUntilShift = Mathf.Round(Time.time);
+        if (TimeUntilShift % ChangePlayerSpeedAt == 0 && oneTime == false && !gameEnded)
         {
-            // Update run time
-            TimeUntilShift = Mathf.Round(Time.time);
-            if (TimeUntilShift % ChangePlayerSpeedAt == 0 && oneTime == false)
-            {
-                oneTime = true;
-                Invoke("SpeedUp", 1f);
-            }
-            // Restart game
-            if (gameEnded && Input.GetKeyDown(KeyCode.R))
-            {
-                RestartGame();
-            }
-            // Terminate app
-            if (gameEnded && Input.GetKeyDown(KeyCode.Escape))
-            {
-                Application.Quit();
-            }
+            oneTime = true;
+            Invoke("SpeedUp", 1f);
+        }
+        // Restart game
+        if (gameEnded && Input.GetKeyDown(KeyCode.R))
+        {
+            RestartGame();
+        }
+        // Terminate app
+        if (gameEnded && Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 

@@ -213,7 +213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137649712593347862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.2, z: -21}
+  m_LocalPosition: {x: 0, y: -0.2, z: -17}
   m_LocalScale: {x: 0.5, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 137649713336382503}
@@ -235,12 +235,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 40
+  SpeedStep: 0
+  MaxSpeed: 0
   NewPlayerPos: {x: 3, y: 0, z: 0}
   CoinSound: {fileID: 0}
   CarSound: {fileID: 0}
   CarCrash: {fileID: 0}
   CrashSmoke: {fileID: 0}
   Smoke: {fileID: 0}
+  RearFlashlights: {fileID: 0}
 --- !u!54 &137649712593347884
 Rigidbody:
   m_ObjectHideFlags: 0

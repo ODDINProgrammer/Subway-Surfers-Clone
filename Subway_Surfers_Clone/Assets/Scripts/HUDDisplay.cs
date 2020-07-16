@@ -5,13 +5,19 @@ using UnityEngine.UI;
 public class HUDDisplay : MonoBehaviour
 {
     // Variables
-    [SerializeField] private TextMeshProUGUI ScoreText; // Score text
-    private int Score = 0;                              // Score value
-    [SerializeField] private TextMeshProUGUI FinalScore;
+    private int Score = 0; 
+    [SerializeField] private TextMeshProUGUI FinalScore; 
+    [SerializeField] private GameObject EngineIcon;
+    [SerializeField] private GameObject EndGameScreen;
+
+    public enum UIElement
+    {
+        EngineIcon = 1,
+        EndGameScreen = 2,
+    }
     // Update is called once per frame
     void Update()
     {
-        ScoreText.text = "SCORE: " + Score.ToString();
     }
 
     public void DisplayFinalScore()
@@ -23,4 +29,23 @@ public class HUDDisplay : MonoBehaviour
     {
         Score += _score;
     }
+
+    public void DisplayUIElement(int index)
+    {
+        switch (index)
+        {
+            default:
+                break;
+            // Activate EngineIcon
+            case 1:
+                EngineIcon.SetActive(true);
+                break; 
+            case 2:
+                EndGameScreen.SetActive(true);
+                DisplayFinalScore();
+                break;
+        }
+    }
+
+    
 }

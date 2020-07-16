@@ -27,7 +27,7 @@ public class WorldGeneration : MonoBehaviour
     {
         //When player exit previous chunk, spawn a new one and remove the one, which player just moved from.
         //I have added a small number to end position check, so that player cant notice chunk being deleted.
-        if (Player.position.z > SpawnedChunks[0].End.position.z + 5)
+        if (Player.position.z > SpawnedChunks[0].End.position.z + 10)
         {
             SpawnChunk();
             Destroy(SpawnedChunks[0].gameObject);
