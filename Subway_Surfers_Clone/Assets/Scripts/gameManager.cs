@@ -2,11 +2,11 @@
 using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
-{
+{   
+    private bool oneTime = false;
     bool gameEnded = false;
     private int Score;
     private int HighScore;
-    private bool oneTime = false;
     private int PickedUpCoins;
 
     [SerializeField] private float TimeUntilShift;
@@ -37,10 +37,9 @@ public class gameManager : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
-    // KeyBoard input handler
     private void Update()
     {
-        // Update run time
+        // Timer, which controlls player speeding up
         TimeUntilShift = Mathf.Round(Time.time);
         if (TimeUntilShift % ChangePlayerSpeedAt == 0 && oneTime == false && !gameEnded)
         {

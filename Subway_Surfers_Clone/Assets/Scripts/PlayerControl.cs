@@ -55,7 +55,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    // Coin pickup
+    // Pick up collectibles method
     private void OnTriggerEnter(Collider other)
     {
         // Playing coin sound
@@ -63,16 +63,24 @@ public class PlayerControl : MonoBehaviour
         {
             CoinSound.Play();
         }
+
+        if (other.tag == "PowerUps" && other.name == "Invinciblility")
+        {
+            Debug.Log("Picked up Invincibility powerup!");
+            FindObjectOfType<PowerUps>().ActivatePowerUp((int)PowerUps.PowerUpType.Invincibility);
+            Destroy(other);
+        }
     }
 
     // Check if player rides into obstacle
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.rigidbody.tag == "Obstacle")
+        // Normal collision method
+        if (collision.rigidbody.tag == "Obstacle" && FindObjectOfType<PowerUps>().InvincibilityActive() == false)
         {
             // After hitting an obstacle car ends up a bit inside of it's model, so I put it back a bit
             transform.position -= new Vector3(0, 0, 0.5f);
-            Speed = 0;       
+            Speed = 0;
             CarSound.Stop();
             CarCrash.Play();
             Smoke.SetActive(true);
@@ -80,11 +88,15 @@ public class PlayerControl : MonoBehaviour
             CrashSmoke.Play();
             FindObjectOfType<gameManager>().EndGame();
         }
+        // Invincibility mode collision method
+        else if(collision.rigidbody.tag == "Obstacle" && FindObjectOfType<PowerUps>().InvincibilityActive() == true)
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
     public void SetSpeed()
     {
-        Debug.Log("Called SPEEDUP!!");
         Speed += SpeedStep;
     }
 }
