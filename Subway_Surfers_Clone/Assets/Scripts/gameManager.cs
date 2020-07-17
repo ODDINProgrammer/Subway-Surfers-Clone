@@ -4,11 +4,14 @@ using UnityEngine.SceneManagement;
 public class gameManager : MonoBehaviour
 {
     bool gameEnded = false;
+    private int Score;
+    private int HighScore;
+    private bool oneTime = false;
+    private int PickedUpCoins;
 
-    
     [SerializeField] private float TimeUntilShift;
     [SerializeField] private float ChangePlayerSpeedAt;
-    private bool oneTime = false;
+
 
     // Game over routine
     public void EndGame()
@@ -16,6 +19,14 @@ public class gameManager : MonoBehaviour
         gameEnded = true;
         if (gameEnded)
         {
+            // Set High Score
+            // HighScore = 0 by default
+            if (Score > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                PlayerPrefs.SetInt("HighScore", Score);
+            }
+            // Display UI elements
+            FindObjectOfType<HUDDisplay>().HideUIElement((int)HUDDisplay.UIElement.CoinUI);
             FindObjectOfType<HUDDisplay>().DisplayUIElement((int)HUDDisplay.UIElement.EngineIcon);
             FindObjectOfType<HUDDisplay>().DisplayUIElement((int)HUDDisplay.UIElement.EndGameScreen);
         }
@@ -48,6 +59,7 @@ public class gameManager : MonoBehaviour
         }
     }
 
+    #region Getters
     public bool ReturnGameStatus()
     {
         return gameEnded;
@@ -58,9 +70,47 @@ public class gameManager : MonoBehaviour
         return ChangePlayerSpeedAt;
     }
 
+    public int GetCoinAmount()
+    {
+        return PickedUpCoins;
+    }
+
+    public int GetScore()
+    {
+        return Score;
+    }
+
+    public int GetHighScore()
+    {
+        return HighScore;
+    }
+    #endregion
+
+    #region Setters
     private void SpeedUp()
     {
         FindObjectOfType<PlayerControl>().SetSpeed();
         oneTime = false;
     }
+
+    public void SetCoinAmount()
+    {
+        PickedUpCoins += 1;
+    }
+
+    private void SetHighScore()
+    {
+        HighScore = Score;
+    }
+
+    public void SetScore(int Value)
+    {
+        Score += Value;
+    }
+    #endregion
+
+
+
+
+
 }

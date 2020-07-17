@@ -13,7 +13,8 @@ public class CoinPickUp : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            FindObjectOfType<HUDDisplay>().SetScore(Value); // Find score game object to access SetScore method
+            FindObjectOfType<gameManager>().SetScore(Value); // Find score game object to access SetScore method
+            FindObjectOfType<gameManager>().SetCoinAmount();
             Destroy(gameObject);
         }
     }

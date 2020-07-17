@@ -5,29 +5,27 @@ using UnityEngine.UI;
 public class HUDDisplay : MonoBehaviour
 {
     // Variables
-    private int Score = 0; 
-    [SerializeField] private TextMeshProUGUI FinalScore; 
-    [SerializeField] private GameObject EngineIcon;
+    [SerializeField] private TextMeshProUGUI ScoreText; 
+    [SerializeField] private TextMeshProUGUI HighScoreText; 
+    [SerializeField] private TextMeshProUGUI CoinText; 
     [SerializeField] private GameObject EndGameScreen;
 
     public enum UIElement
     {
         EngineIcon = 1,
         EndGameScreen = 2,
+        CoinUI = 3,
     }
     // Update is called once per frame
     void Update()
     {
+        CoinText.text = FindObjectOfType<gameManager>().GetCoinAmount().ToString();
     }
 
-    public void DisplayFinalScore()
+    public void DisplayScores()
     {
-        FinalScore.text = "Your Score: " + Score.ToString();
-    }
-    //Method to access score from outside of class. Method increases score.
-    public void SetScore(int _score)
-    {
-        Score += _score;
+        ScoreText.text = FindObjectOfType<gameManager>().GetScore().ToString();
+        HighScoreText.text = PlayerPrefs.GetInt("HighScore").ToString();
     }
 
     public void DisplayUIElement(int index)
@@ -36,16 +34,28 @@ public class HUDDisplay : MonoBehaviour
         {
             default:
                 break;
-            // Activate EngineIcon
             case 1:
-                EngineIcon.SetActive(true);
                 break; 
+            // Activate EndGame UI
             case 2:
                 EndGameScreen.SetActive(true);
-                DisplayFinalScore();
+                DisplayScores();
                 break;
         }
     }
 
+    public void HideUIElement(int index)
+    {
+        switch (index)
+        {
+            default:
+                break;
+            // Deactivate CoinUI
+            case 3:
+                GameObject.Find("CoinCounter").SetActive(false);
+                break;
+            
+        }
+    }
     
 }
