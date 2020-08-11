@@ -12,7 +12,6 @@ public class gameManager : MonoBehaviour
     [SerializeField] private float TimeUntilShift;
     [SerializeField] private float ChangePlayerSpeedAt;
 
-
     // Game over routine
     public void EndGame()
     {

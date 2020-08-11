@@ -8,9 +8,10 @@ public class WorldGeneration : MonoBehaviour
     //Variables
     [SerializeField] private Transform Player;                              // Access to player game object
     [SerializeField] private Chunk[] Chunks;                                // Array of chunks 
+    [SerializeField] private Chunk[] SpecialChunks;                         // Array of special chunks 
     [SerializeField] private List<Chunk> SpawnedChunks = new List<Chunk>(); // List of spawned chunks currently visible on screen
     [SerializeField] private Chunk StartingChunk;                           // Starting chunk reference
-    
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -37,10 +38,20 @@ public class WorldGeneration : MonoBehaviour
 
     private void SpawnChunk()
     {
+        // Create new chunk
+        Chunk newChunk;
+        // Check what kind of chunk we should spawn
+        // Spawn special chunk
+        if (FindObjectOfType<PowerUps>().CoinMadnessOn)
+        {
+            newChunk = Instantiate(SpecialChunks[0]);
+        }
+        // Spawn normal chunk 
+        else
+            newChunk = Instantiate(Chunks[1]); 
 
-        Chunk newChunk = Instantiate(Chunks[1]); // Spawn new chunk
         newChunk.transform.parent = transform;   // Make new chunk a child of World game object. Makes game inspector cleaner.
-        newChunk.transform.position = 
+        newChunk.transform.position =
             SpawnedChunks[SpawnedChunks.Count - 1].End.position - newChunk.Begin.localPosition; // Move new chunk to allign with end point of previous one.
         SpawnedChunks.Add(newChunk);             // Add new chunk to list of chunks
     }

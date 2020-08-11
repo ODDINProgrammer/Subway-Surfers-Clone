@@ -7,11 +7,6 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float SpeedStep;        // How much speed changes 
     [SerializeField] private float MaxSpeed;         // Max speed 
     [SerializeField] private Vector3 NewPlayerPos;   // Store position, where player will be moved to
-    // Sounds
-    [Header("Sounds")]
-    [SerializeField] private AudioSource CoinSound;
-    [SerializeField] private AudioSource CarSound;
-    [SerializeField] private AudioSource CarCrash;
     // Particles
     [Header("Particles")]
     [SerializeField] private ParticleSystem CrashSmoke;
@@ -61,14 +56,21 @@ public class PlayerControl : MonoBehaviour
         // Playing coin sound
         if (other.tag == "Coin")
         {
-            CoinSound.Play();
+            FindObjectOfType<SoundHandler>().AudioList[(int)SoundHandler.AudioType.Coin].Play();
         }
-
+        // Invincibility 
         if (other.tag == "PowerUps" && other.name == "Invinciblility")
         {
             Debug.Log("Picked up Invincibility powerup!");
             FindObjectOfType<PowerUps>().ActivatePowerUp((int)PowerUps.PowerUpType.Invincibility);
-            Destroy(other);
+            Destroy(other.gameObject);
+        }
+        // CoinMadness
+        if (other.tag == "PowerUps" && other.name == "CoinMadness")
+        {
+            Debug.Log("Picked up CoinMadness powerup!");
+            FindObjectOfType<PowerUps>().ActivatePowerUp((int)PowerUps.PowerUpType.CoinMadness);
+            Destroy(other.gameObject);
         }
     }
 
@@ -76,21 +78,22 @@ public class PlayerControl : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // Normal collision method
-        if (collision.rigidbody.tag == "Obstacle" && FindObjectOfType<PowerUps>().InvincibilityActive() == false)
+        if (collision.rigidbody.tag == "Obstacle" && FindObjectOfType<PowerUps>().Invincible == false)
         {
             // After hitting an obstacle car ends up a bit inside of it's model, so I put it back a bit
             transform.position -= new Vector3(0, 0, 0.5f);
             Speed = 0;
-            CarSound.Stop();
-            CarCrash.Play();
+            FindObjectOfType<SoundHandler>().AudioList[(int)SoundHandler.AudioType.Engine].Stop();
+            FindObjectOfType<SoundHandler>().AudioList[(int)SoundHandler.AudioType.Crash].Play();
             Smoke.SetActive(true);
             RearFlashlights.Play("FlashingRearLight");
             CrashSmoke.Play();
             FindObjectOfType<gameManager>().EndGame();
         }
         // Invincibility mode collision method
-        else if(collision.rigidbody.tag == "Obstacle" && FindObjectOfType<PowerUps>().InvincibilityActive() == true)
+        else if(collision.rigidbody.tag == "Obstacle" && FindObjectOfType<PowerUps>().Invincible == true)
         {
+            FindObjectOfType<SoundHandler>().AudioList[(int)SoundHandler.AudioType.Boom].Play();
             Destroy(collision.gameObject);
         }
     }
