@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class PowerUps : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class PowerUps : MonoBehaviour
     public bool Invincible = false;
     private float InvincibleTimeReset;              // Stores Invicibility timer value.
     [SerializeField] private float InvincibleTime;  // The same as InvicibleTimeReset, but this one is used in methods and being processed.
-
+    [SerializeField] private TextMeshProUGUI InvincibleTextField;
+    [SerializeField] private GameObject InvincibleTimerObject;
     // Coin Madness
     public bool CoinMadnessOn = false;
     [SerializeField] private float CoinMadnessTimer;
@@ -31,11 +33,13 @@ public class PowerUps : MonoBehaviour
         if (InvincibleTime > 0 && Invincible)
         {
             InvincibleTime -= Time.deltaTime;
+            InvincibleTextField.text = InvincibleTime.ToString("F1");
         }
         else
         {
             InvincibleTime = InvincibleTimeReset;
             Invincible = false;
+            InvincibleTimerObject.SetActive(false);
         }
         #endregion
         #region CoinMadness
@@ -59,6 +63,7 @@ public class PowerUps : MonoBehaviour
             // Invincibility 
             case 1:
                 Invincible = true;
+                InvincibleTimerObject.SetActive(true);
                 break;
             case 2:
                 CoinMadnessOn = true;
