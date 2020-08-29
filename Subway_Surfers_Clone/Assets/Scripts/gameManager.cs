@@ -38,6 +38,9 @@ public class gameManager : MonoBehaviour
 
     private void Update()
     {
+        // Pause game
+        if (Input.GetKeyDown(KeyCode.Escape))
+            FindObjectOfType<PausePanel>().PauseGame();
         // Timer, which controlls player speeding up
         TimeUntilShift = Mathf.Round(Time.time);
         if (TimeUntilShift % ChangePlayerSpeedAt == 0 && oneTime == false && !gameEnded)
@@ -49,6 +52,7 @@ public class gameManager : MonoBehaviour
         if (gameEnded && Input.GetKeyDown(KeyCode.R))
         {
             RestartGame();
+            // Reset music/SFX volume values 
         }
         // Terminate app
         if (gameEnded && Input.GetKeyDown(KeyCode.Escape))

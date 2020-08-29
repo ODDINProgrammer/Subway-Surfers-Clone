@@ -6,7 +6,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Musci
+  m_Name: Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: a54eb66c5198817408edf4bb9587f274
   m_Children: []
@@ -48,7 +48,11 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 20e58caf266976a4c97d0c7b29231b0c
+    name: MasterVolume
+  - guid: 883651d1ad16638449fb0b2942f37d93
+    name: MusicVolume
   m_AudioMixerGroupViews:
   - guids:
     - 12b914c6d3c67304fb887394a7f7a0c2
@@ -102,9 +106,9 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 9a54cd50540937246b0d294b77691aa1
   m_FloatValues:
-    883651d1ad16638449fb0b2942f37d93: 0.27000841
-    1f95ccec26701484facf66c0367f6e14: -0.27209902
-    20e58caf266976a4c97d0c7b29231b0c: -0.27209902
+    883651d1ad16638449fb0b2942f37d93: 0
+    1f95ccec26701484facf66c0367f6e14: 0
+    20e58caf266976a4c97d0c7b29231b0c: 0
   m_TransitionOverrides: {}
 --- !u!243 &4810874933582227806
 AudioMixerGroupController:
